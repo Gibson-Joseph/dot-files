@@ -143,6 +143,18 @@ parse_python_version() {
     fi
 }
 
+#########################################################
+# COLOR VARIABLES
+#########################################################
+# Text colors
+RED="\[\e[01;31m\]"
+CYAN="\[\e[36m\]"
+BLUE="\[\e[01;34m\]"
+GREEN="\[\e[01;32m\]"
+RESET="\[\e[00m\]"
+YELLOW="\[\e[33m\]"
+MAGENTA="\[\e[0;35m\]"
+WHITE="\[\e[0;37m\]"
 
 #########################################################
 # PROMPT CONFIGURATION
@@ -154,12 +166,11 @@ parse_python_version() {
 # - directory
 # - git branch
 
-PS1="\[\e[33m\]\$(parse_conda_env)\[\e[0m\]\
-\[\e[33m\]\$(parse_python_version)\[\e[0m\] \
-\[\033[01;32m\]\u@\h\[\033[00m\]:\
-\[\033[01;34m\]\w\
-\[\033[01;31m\]\$(parse_git_branch)\
-\[\033[00m\]\$ "
+PS1="${YELLOW}\$(parse_conda_env)${RESET}\
+${YELLOW}\$(parse_python_version)${RESET} \
+${GREEN}\u@\h${RESET}:\
+${BLUE}\w\
+${RED}\$(parse_git_branch)${RESET}\$ "
 
 
 #########################################################
@@ -172,3 +183,4 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
