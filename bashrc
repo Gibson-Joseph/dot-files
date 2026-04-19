@@ -52,17 +52,23 @@ fi
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
 
-    alias ls='ls --color=auto'
-    alias grep='grep --color=auto'
+    # alias ls='ls --color=auto'
+    # alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
 fi
 
 # Useful ls shortcuts
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+# alias ll='ls -alF'
+# alias la='ls -A'
+# alias l='ls -CF'
 
+alias ls='eza --icons'
+alias ll='eza -l --header --icons'
+alias la='eza -la --header --icons'
+alias tree='eza --tree --icons'
+alias grep='grep --colour'
+alias history='history -50'
 
 #########################################################
 # ALERT FOR LONG RUNNING COMMANDS
@@ -115,7 +121,9 @@ if [ -f "$CONDA_HOME/bin/conda" ]; then
     unset __conda_setup
 fi
 
-
+# Fix locale for Nerd Fonts / tmux
+export LANG=en_US.UTF-8
+export LC_ALL=en_US.UTF-8
 
 #########################################################
 # GIT BRANCH PARSER (for prompt)
@@ -148,7 +156,7 @@ parse_python_version() {
 #########################################################
 # Text colors
 RED="\[\e[01;31m\]"
-CYAN="\[\e[36m\]"
+CYAN="\[\e[36m\]" 
 BLUE="\[\e[01;34m\]"
 GREEN="\[\e[01;32m\]"
 RESET="\[\e[00m\]"
