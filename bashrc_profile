@@ -1,0 +1,6 @@
+# inside ~/.bash_profile
+# This file is executed only when you log in (e.g., SSH login, or first shell when starting a session).
+
+if [ -f ~/.bashrc ]; then
+  . ~/.bashrc
+fi
