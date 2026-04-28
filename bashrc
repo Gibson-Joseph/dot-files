@@ -1,4 +1,4 @@
-# ~/.bashrc
+# ~/.BASHRC
 # -------------------------------------------------------
 # Bash configuration file
 # Loaded for interactive non-login shells
@@ -14,6 +14,11 @@ case $- in
       *) return;;
 esac
 
+
+#########################################################
+# VIM CONFIG
+#########################################################
+# set -o vi
 
 #########################################################
 # HISTORY SETTINGS
@@ -69,6 +74,12 @@ alias la='eza -la --header --icons'
 alias tree='eza --tree --icons'
 alias grep='grep --colour'
 alias history='history -50'
+
+#########################################################
+# BAT (better cat)
+#########################################################
+alias cat='batcat'
+alias bat='batcat'
 
 #########################################################
 # ALERT FOR LONG RUNNING COMMANDS
@@ -191,4 +202,8 @@ xterm*|rxvt*)
 *)
     ;;
 esac
+
+#########################################################
+# POWERLINE CONFIG
+#########################################################
 
