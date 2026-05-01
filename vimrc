@@ -16,6 +16,8 @@ Plug 'justinmk/vim-sneak'
 " Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-commentary'
 Plug 'machakann/vim-highlightedyank'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -36,3 +38,5 @@ syntax enable
 " Plugin Settings
 " ================================
 let g:highlightedyank_highlight_duration = 200
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'dark'
