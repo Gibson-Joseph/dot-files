@@ -15,6 +15,7 @@ Plug 'tpope/vim-sensible'
 Plug 'justinmk/vim-sneak'
 " Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'machakann/vim-highlightedyank'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -38,5 +39,15 @@ syntax enable
 " Plugin Settings
 " ================================
 let g:highlightedyank_highlight_duration = 200
+
+" ================================
+" Airline Customization
+" ================================
 let g:airline_powerline_fonts = 1
-let g:airline_theme = 'dark'
+let g:airline_theme = 'wombat' "murmur dark wombat term ubaryd
+
+" Enable filetype + encoding + position
+let g:airline_section_x = ''
+let g:airline_section_y = '%{&filetype}'
+let g:airline_section_z = '%l:%c'
+
